@@ -1,0 +1,170 @@
+#catpro{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* #search-container{
+    flex:1;
+} */
+
+#categorysSearch{
+    display: flex;
+    background: linear-gradient(to top, #ff9999 0%, #cc0099 100%);
+    /* border: 6px palevioletred solid; */
+    /* margin:0 5px 5px 5px; */
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 840px;
+    flex-direction: row;
+    padding: 2% 2% 2% 2%;
+    margin: 3% 3% 3% 3%;
+    flex-flow: row wrap;
+    /* z-index: 1;
+    position: fixed;
+    width: 20%; */
+}
+
+#categorys{
+    display: flex;
+}
+
+#searchProduct{
+    height: 30px;
+    margin-right: 20px;
+}
+#search{
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 4px solid rgba(23, 4, 68, 0.782);
+    justify-content: space-between;
+    width: 70%;
+    text-align: center;
+    color: black;
+    background: linear-gradient(to bottom,#ffff99 2%,#ff99cc 107%);
+}
+
+#btnSearch{
+    height: 30px;
+    width:fit-content;
+    border-radius: 3px 3px 3px 3px;
+    border: 4px rgba(38, 15, 90, 0.632) solid;
+    outline: none;
+    background-color: rgba(112, 131, 225, 0.401);
+    color: black;
+}
+
+#btnSearch:hover{
+    cursor: pointer;
+    background-color: rgb(168, 51, 181);
+    border: 4px solid rgba(23, 4, 68, 0.782);
+    color: white;
+}
+.category{
+    min-width: 73px;
+    padding: 15px 0;
+    /* border: 2px rgba(122, 5, 63, 0.782) solid; */
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    background: linear-gradient(to top, #ffcccc 0%, #ffffff 100%);
+    margin: 1% 1% 1% 1%;
+}
+.category:hover{
+    cursor: pointer;
+    background: linear-gradient(to bottom, #009900 0%, #66ff99 100%);
+    /* border: 3.5px solid    rgb(122, 5, 63, 0.782); */
+    color: white;
+}
+#messageHere{
+    margin: 2% 25% 2% 25%;
+    color: white;
+    background: linear-gradient(to bottom, #009900 0%, #66ff99 100%);
+    padding: 1% 1% 1% 1%;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(231, 187, 139, 0.966), 0 6px 20px 0 rgba(211, 185, 151, 0.313);
+    border-radius: 15px;
+}
+.product{
+    width: 200px;
+    height: 220px;
+    background: linear-gradient(to bottom, #ffffff 52%, #cc6699 112%);
+    margin: 5px;
+    border: 5px solid  pink;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+}
+.product:hover{
+    border: 5px solid  rgb(201, 21, 111);
+}
+.productImg{
+    display: block;
+    height: 100px;
+    width: auto;
+    max-width: 190px;
+    margin: auto;
+    margin-top: 10px;
+}
+.product div{
+    margin: 10px;
+}
+.productPrice{
+    font-size: 20px;
+}
+#backgroundPopup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#popup{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    right:25% ;
+    top: 25%;
+    background: linear-gradient(to bottom, #ff3399 0%, #ffcc99 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 60px 60px 60px 60px;
+    font-weight: bolder;
+}
+#popup img{
+    width: 200px;
+    height: auto;
+}
+#addquantity{
+    display: flex;
+}
+#addquantity div{
+    width: 20px;
+    text-align: center;
+}
+.plusminus{
+    width: 20px;
+}
+.deleteCross{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.deleteCross:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#addToCart{
+    background: linear-gradient(to top, #66ff33 0%, #339933 100%);
+    color: black;
+    border-radius: 5px 5px 5px 5px;
+}
