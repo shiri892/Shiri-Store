@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Gluten:wght@200&display=swap" rel="stylesheet">
+    <title>Receipts</title>
+    <style>
+        h4{
+            text-align: center; color: white;}
+
+        html, body{
+            font-family: 'Segoe UI', Tahoma, fantasy, Verdana, sans-serif;
+        }
+
+        body{
+            padding: 45px;
+        }
+
+        h1{
+            color: white;
+            background: linear-gradient(to bottom, #ff00ff 0%, #ffffff 100%);
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: xx-large;
+        }
+
+        h2{
+            font-family: 'Ephesis', cursive; 
+            font-size: xx-large;
+        }
+        
+        tr{
+            background-color: white;
+            border: 2px #ff00ff solid;
+            /* margin: 0 3px; */
+        }
+
+        td,th{
+            padding: 5px 11px;
+            border: 2px #ff00ff solid;
+        }
+
+        td img{
+            height: 65px;
+            width: auto;
+        }
+
+        .qp,th{
+            text-align: center;
+        }
+
+        .pn{
+            max-width: 360px;
+        }
+
+        footer{
+            background: linear-gradient(to top, #ff00ff 0%, #ffffff 100%);
+            padding: 10px 25px;
+        }
+
+        #tdprice{
+            text-align: end;
+        }
+
+        footer a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shiri-Store</h1>
+        <p>{{data.datenow}}</p>
+    </header>
+    <section>
+        <h2>Thank you {{data.user_name}} for your purchase</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            {{#each data.products}}
+                <tr>
+                    <td><img src="http://localhost:3001/products-imgs/{{this.img}}" alt=""></td>
+                    <td class="pn">{{this.product_name}}</td>
+                    <td class="qp">{{this.quantity}}</td>
+                    <td class="qp">{{this.price}} ₪/unity</td>
+                </tr>
+            {{/each}}
+            <tr>
+                <td colspan="4" id="tdprice">Total price : <strong>{{data.total_price}} ₪</strong></td>
+            </tr>
+        </table><br>
+        <div>
+            <h3>order information</h3>
+            <p>name: {{data.user_name}}</p>
+            <p>Receiving adress : {{data.received_adress}}, {{data.received_city}}</p>
+            <p>credit_card: **{{data.twoNumCard}}</p>
+            <p>Receiving Date: {{data.received_date}}</p>
+        </div>
+    </section><br><br>
+    <footer>
+        <h4>We hope you will purchase from us again</h4>
+    </footer>
+
+</body>
+</html>
